@@ -1,118 +1,201 @@
-.lead {
-  font-size: 1.25rem;
+
+body{
+  margin: 0px;
+  padding: 0px;
 }
 
-.container {
-  max-width: 38rem;
-  padding: 2rem 1.5rem;
-  margin-left:  auto;
-  margin-right: auto;
-
-  @media (min-width: 38rem){
-    padding: 5rem 1rem;
-  }
+.container{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+   "info-header text-header";
+}
+.header-info{
+  grid-area: info-header;
+  align-self: stretch;
+  background-image: 
+      
+  url("/assets/img/fundo_tony_arthur_5.jpg");
+  background-size: cover;
+  background-color:gray;
+  height: 100vh;
+  width: 100%;
 }
 
-.masthead {
-
-  &-title {
-    font-weight: 300;
-
-    a {
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-
-    span {
-      color: #ddd;
-    }
-
-  }
-
-  &-title--small {
-    margin-bottom: .75rem;
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    a {
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .masthead-nav {
-    margin-bottom: 2rem;
-
-    a {
-      color: #aaa;
-      font-weight: 300;
-      text-transform: lowercase;
-      -webkit-transition: all .2s ease;
-         -moz-transition: all .2s ease;
-              transition: all .2s ease;
-
-      &:hover,
-      &:focus {
-        color: #333;
-        text-decoration: none;
-      }
-
-      + a {
-        margin-left: .25rem;
-      }
-    }
-  }
-
+.fundo::before {
+  content:"";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.header-conteudo{
+  grid-area: text-header;
+  background-color:#fff;
+  align-self: stretch;
+  text-align: center;
+}
+.header-info .about-wrapper {
+  text-align: center;
+  padding-top: 189px;
+  
+}
+.header-info .blog-avatar{
+  position: relative;
+  width: 100%;
+  top: -15px;
+}
+.header-info .blog-link-avatar {
+    display: inline-block;
+    overflow: hidden;
+    width: 100px;
+    height: 96px;
+    margin-bottom: 6px;
+    box-shadow: 0 0 14px 0 rgba(40,43,45,.33); 
+}
+.header-info .avatar-circle {
+  border-radius: 48px;
+  
 }
 
-.page {
-  &-title {
-    margin-bottom: 2rem;
-  }
+.blog-name{
+
+  color: #fff;
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 8px;
 }
 
-.post {
-  &-title {
-    margin-bottom: .25rem;
-  }
-  &-date {
-    margin-bottom: 2rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
+.text-description{
+color: #fff;
+max-width: 640px;
+margin: 0 auto;
+font-size: 16px;
+}
+.text-uppercase{
+text-transform: uppercase;
+letter-spacing: 1em;
 }
 
-.list {
-  &-post-title {
-    margin-bottom: .25rem;
+.social-icons{
 
-    a {
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-  &-post-date {
-    margin-bottom: 1rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+.social-list{
+margin-bottom: 0;
+list-style: none;
+}
+.social-icon{
+display: inline-block;
+margin: 20px;
+transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+.social-link{
+  opacity: .9;
+  color: #fff;
+  font-size: 13px;
+}
+.social-link .fab {
+font-style: normal;
+font-weight: 400;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
 }
 
-.projects-list {
-  a {
-    color: #333;
-  }
+h1{
+  color: #fff;
+  text-align: center;
 }
+/*
+#aside{
+  position: fixed;
+  overflow: hidden;
+  //width: 50%;
+  height: 100%;
+  padding: 60px;
+  background-position: 20% 0;
+  background-size: cover;
+  grid-area: areadosmeusdados;
+  
+}
+
+.img-background-home {
+  background: rgb(2,0,36);
+  background-image: url("https://www.freepik.es/fotos-vectores-gratis/fondo");
+}
+
+.teste{
+  grid-area: areadotexto;
+}
+
+
+.about-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  transform: translateY(-50%);
+  text-align: center;
+  
+}
+.blog-name{
+    color: #fff;
+    font-size: 14px;
+    max-width: 640px;
+    margin: 0 auto 8px;
+}
+
+.text-description{
+  color: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.text-uppercase{
+  text-transform: uppercase;
+  letter-spacing: 1em;
+}
+.avatar-circle {
+  border-radius: 48px;
+  
+}
+
+
+.social-icons{
+    position: absolute;
+    bottom: 80px;
+    left: -18px;
+    width: 100%;
+    text-align: center;
+}
+.social-list{
+  margin-bottom: 0;
+  list-style: none;
+}
+.social-icon{
+  display: inline-block;
+  margin: 12px;
+  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+.social-link{
+    opacity: .9;
+    color: #fff;
+    font-size: 13px;
+}
+.social-link .fab {
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+*/
