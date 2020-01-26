@@ -18,6 +18,6 @@ img: O-que-e-crm.jpg
       <p>
         
       </p>
-      <img src="assets/img/posts/2020-01-22-codigo-ampscript-com-editor-externo/Codesandbox-create-account.jpg">
+      <img src="/assets/img/posts/2020-01-22-codigo-ampscript-com-editor-externo/Codesandbox-create-account.JPG">
 </div>
   
