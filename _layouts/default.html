@@ -4,18 +4,16 @@ layout: compress
 <!DOCTYPE html>
 
 <html lang="pt-br">
-{% include head.html %}
-<body>
-    <div class="container">
-      {% include header.html %}
-
+{% include head.html %} 
+  <body>
+    <div class="container">  
+        {% include aside.html %}
       <div class="header-conteudo ">
-       
-        {{ content }}
-        
+        <section class="content-section">
+            {{ content }}
+        </section>
       </div>
+    </div>>
     </div>
-    
-    
-</body>
+  </body>
 </html>
