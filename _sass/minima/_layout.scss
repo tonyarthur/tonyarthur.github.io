@@ -1,291 +1,97 @@
-/*Grid*/
-.container{
-  display: grid;
-  align-items: center;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-template-areas:
-   "info-header text-header"
-}
-.socialMediaHeader{
-  grid-template-areas: 
-    "img1""img2""img3""img4""img5"
-}
-.imgHeader1{
-  grid-area: img1;
-}
-.imgHeader2{
-  grid-area: img2;
-}
-.imgHeader3{
-  grid-area: img3;
-}
-.imgHeader4{
-  grid-area: img4;
-}
-.imgHeader5{
-  grid-area: img5;
-}
-#aside {
-  position: fixed;
-  width: 50%;
-  height: 100%;
-}
 
-.aside-info{
-  grid-area: info-header;
-  align-self: stretch;
-  background-image: 
-  url("/assets/img/fundo_tony_arthur_5.jpg");
-  background-size: cover;
-  background-color:gray;
-  height: 100vh;
-  width: 100%;
-  position: absolute ;
-}
-
-.fundo::before {
-  content:"";
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0,0,0,0.5);
-}
-.header-conteudo{
-  grid-area: text-header;
-  background-color:#fff;
-  align-self: stretch;
-  text-align: center;
-}
-.aside-info .about-wrapper {
-  text-align: center;
-  padding-top: 189px;
-  
-}
-.aside-info .blog-avatar{
-  position: relative;
-  width: 100%;
-  top: -15px;
-}
-.aside-info .blog-link-avatar {
-  display: inline-block;
-  overflow: hidden;
-  width: 100px;
-  height: 96px;
-  margin-bottom: 6px;
-  box-shadow: 0 0 14px 0 rgba(40,43,45,.33); 
-}
-.aside-info .avatar-circle {
-  border-radius: 48px;
-  
-}
-.content-section{
-  padding: 2rem 0;
-  margin: 0 1.7rem;
-}
-.blog-name{
-  color: #fff;
-  font-size: 18px;
-  max-width: 640px;
-  margin: 0 auto 8px;
-}
-/*.continue-lendo > a:hover{
-  
-}*/
-.text-description-header{
-  max-width: 640px;
-  margin: 0 auto;
-  font-size: 18px;
-}
-.post-title {
-  color: #3e3e3e;
-}
-.list-post-title > a{
-  color: #3e3e3e;
-  
-}
-.text-conteudo-post > div > p{
-  color: #3e3e3e;
-  max-width: 640px;
-  margin: 0 auto;
-  font-size: 18px;
-  margin-bottom: 20px;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.text-description{
-  color: #fff;
-  max-width: 640px;
-  margin: 0 auto;
-  font-size: 16px;
-}
-.text-uppercase{
-  text-transform: uppercase;
-  letter-spacing: 1em;
-}
-
-.social-icons{
-  bottom: 80px;
-  width: 100%;
-  text-align: center;
-}
-.social-list{
-  margin-bottom: 0;
-  list-style: none;
-  padding: 0;
-}
-.social-icon{
-  display: inline-block;
-  margin: 20px;
-  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
-}
-.social-link{
-  opacity: .9;
-  color: #fff;
-  font-size: 13px;
-}
-.social-link .fab {
-  font-style: normal;
-  font-weight: 400;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-.divisor-post{
-  width: 20%;
-  margin: 1.7rem 0;
-  border-top: 1px solid #ddd;
-}
-h1{
-  color: #fff;
-  text-align: center;
-}
-hr{
-  border: none;
-}
-
-// Mobile
-@media screen and (min-width: 320px) and (max-width: 640px){
-  .container{
+.container {
     display: grid;
-    align-items: center;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: unset;
-  }
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'aside main'
+                                                    
 }
-@media only screen and ( max-width: 600px){
-
-  .header-conteudo{
-    grid-area: unset;
-    grid-row: 2 / 4;
-  }
-  .social-icons{
-    margin-top: 243px;
-  }
- 
+main {
+    grid-area: main;
+    padding: 10px;
+    background: #FFF;
 }
-
-@media only screen and ( max-width: 320px){
-  .blog-name {
-    font-size: 15px;
-  }
-  .text-description {
-  text-align: justify;
-  font-size:13px;
-  width: 284px;
-
-  }
-  .social-icons{
-    margin-top: 80px;
-  }
+main section {
+  padding: 0px 30px;
 }
-/*
-#aside{
-  position: fixed;
-  overflow: hidden;
-  //width: 50%;
-  height: 100%;
-  padding: 60px;
-  background-position: 20% 0;
-  background-size: cover;
-  grid-area: areadosmeusdados;
-  
-}
-
-.img-background-home {
-  background: rgb(2,0,36);
-  background-image: url("https://www.freepik.es/fotos-vectores-gratis/fondo");
-}
-
-.teste{
-  grid-area: areadotexto;
-}
-
-
-.about-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  padding: 60px;
-  transform: translateY(-50%);
+main section article h1 {
   text-align: center;
-  
-}
-.blog-name{
-    color: #fff;
-    font-size: 14px;
-    max-width: 640px;
-    margin: 0 auto 8px;
 }
 
-.text-description{
-  color: #fff;
-  max-width: 640px;
-  margin: 0 auto;
-}
-.text-uppercase{
-  text-transform: uppercase;
-  letter-spacing: 1em;
-}
-.avatar-circle {
-  border-radius: 48px;
-  
+main section article p {
+  text-align: left;
+  line-height: 1.7rem;
+  margin-bottom: 1.3rem;
 }
 
 
-.social-icons{
-    position: absolute;
-    bottom: 80px;
-    left: -18px;
-    width: 100%;
-    text-align: center;
+aside {
+    grid-area: aside;
+    background: radial-gradient(ellipse at bottom, #5091DD 0%, #030617 100%);
+    padding: 130px 12px 0 12px;
+    text-align: center;   
 }
-.social-list{
-  margin-bottom: 0;
-  list-style: none;
+aside img{
+    border-radius: 50px 50px;
+    border: none;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 14px 0 rgba(247, 241, 241, 0.829);
+    margin-bottom: 20px;
+} 
+
+aside h1 {
+    font-size: 20px;
+    letter-spacing: 23px;
+    text-transform: uppercase;
+    color: #FFF !important;
 }
-.social-icon{
-  display: inline-block;
-  margin: 12px;
-  transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+
+aside ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
 }
-.social-link{
-    opacity: .9;
-    color: #fff;
-    font-size: 13px;
+aside ul li {
+    padding: 20px;
 }
-.social-link .fab {
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
+aside p {
+    font-size: 15px;
 }
-*/
+.social-link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.social-link :hover {
+    color: #030617;
+}
+.social {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    opacity: .8;
+}
+.text-white {
+    color: #ffffff;
+}
+.divisor-post {
+    width: 20%;
+    margin: 1.7rem 0;
+    border-top: 0px solid #ddd;
+}
+.text-al-center{
+  text-align: center;
+}
+
+/*Mobile*/
+
+@media only screen and (max-width:600px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'aside' 
+                             'main'
+    }    
+}
+

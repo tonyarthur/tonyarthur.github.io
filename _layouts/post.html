@@ -4,11 +4,9 @@ layout: default
 {% include minutes-to-read.html%}
 <article class="text-conteudo-post">
   <h1 class="post-title">{{page.title}}</h1>
-  <div clas ="post-date">
+  <div class="text-al-center">
       <time>{{page.date | date_to_string}}</time>
-      <span class="reading-time"> - 
-       {{minutesText}}
-      </span>
+      <span> - {{minutesText}}</span>
   </div>
   <br>
   {{content}}

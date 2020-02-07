@@ -2,18 +2,14 @@
 layout: compress
 ---
 <!DOCTYPE html>
-
 <html lang="pt-br">
 {% include head.html %} 
-  <body>
-    <div class="container">  
-        {% include aside.html %}
-      <div class="header-conteudo ">
-        <section class="content-section">
-            {{ content }}
-        </section>
-      </div>
-    </div>>
-    </div>
+  <body class="container">
+    {% include aside.html %}
+   <main>
+      <section>
+        {{ content }}
+      </section> 
+   </main> 
   </body>
 </html>
