@@ -25,6 +25,8 @@ linkedin_username:  in/tonyarthursantos/
 facebook_username:  t.arthursantos
 instagram_username: tonyarthur_
 
+#Google Analytics
+google_analytics: UA-158161372-1
 # Build settings
 markdown: kramdown
 theme: minima
