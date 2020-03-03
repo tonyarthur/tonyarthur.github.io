@@ -19,11 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
  "Criado para compartilhar conhecimentos sobre Salesforce marketing cloud, tecnologias e sobre minha pessoa"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: tonyarthur_
-github_username:  tonyarthur
-linkedin_username:  in/tonyarthursantos/
-facebook_username:  t.arthursantos
-instagram_username: tonyarthur_
+
 
 #Google Analytics
 google_analytics: UA-158161372-1

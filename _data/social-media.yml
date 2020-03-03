@@ -1,0 +1,29 @@
+facebook:
+  id: 't.arthursantos'
+  href: 'https://www.facebook.com/'
+  title: 'Facebook'
+  fa-icon: 'fa-facebook-f'
+
+instagram: 
+  id: 'tonyarthur_'
+  href: 'http://instagram.com/'
+  title: 'instagram'
+  fa-icon: 'fa-instagram'
+
+twitter:
+  id: 'tonyarthur_'
+  href: 'https://www.twitter.com/'
+  title: 'Twitter'
+  fa-icon: 'fa-twitter'
+
+linkedin: 
+  id: 'in/tonyarthursantos/'
+  href: 'https://www.linkedin.com/'
+  title: 'Linkedin'
+  fa-icon: 'fa-linkedin-in'
+
+github:
+  id: 'tonyarthur'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'fa-github'

@@ -27,10 +27,10 @@ seja mais produtivo."
             Feito isso o passo mais importante é ir até a aba <em>Deployment</em> e realizar um deploy do projeto, seguindo os passos do netlify. 
         </p>
       <div class="text-al-center">
-            <img src="/assets/img/posts/2020-01-22-codigo-ampscript-com-editor-externo/Codesandbox-create-account.JPG">
+            <img src="/assets/img/posts/2020-01-22-codigo-ampscript-com-editor-externo/Codesandbox-create-account.JPG" title="Editor externo Codesandbox" alt="Editor externo CodeSandbox">
       </div>
       <p>
-            Processo pronto, copie o link de acesso externo deste projeto, geralmente ele estará no lado direito, algo como <em><a>https://vt5hpe.csb.app/</a></em>.
+            Processo pronto, copie o link de acesso externo deste projeto, geralmente ele estará no lado direito, algo como <em><a target="_blank" href="https://vt5hpe.csb.app/">https://vt5hpe.csb.app/</a></em>.
       </p>
       <br/>
       <h2>Configurando a landing page</h2>
