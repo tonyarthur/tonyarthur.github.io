@@ -20,9 +20,7 @@ description: "Fazer uso de bibliotecas de terceiros ou qualquer outro recurso es
       <p>Bom, com todos estes arquivos preparados, iremos fazer a importação dos mesmos para os recursos estáticos na organização da Salesforce.</p>
       <p>Para isso tu deves acessar o ícone de engrenagem, em seguida clicar em Setup, na caixa de busca rápida digite por Static Resources ou ( Recursos estáticos).</p>
       <p>Clique em new (novo), dê um nome para o seu recurso estático, em meu caso será MyStyle e vou carregar o meu arquivo CSS direto do meu computador. </p>
-    
       <img src="/assets/img/posts/2023-01-16-Carregar-scripts-e-folhas-de-estilos-CSS-usando-o-lightning-web-components/inserindo-arquivo-estatico.png" title="Editor externo Codesandbox" alt="Editor externo CodeSandbox">
-    
       <p>Faço o mesmo processo para o Script de PDF-lib baixado anteriormente com o nome PDFLib</p>
       <p>Agora com os arquivos carregados na organização iremos criar um arquivo em lwc chamado <strong>loadScriptAndStyle</strong></p>
       <p>Faremos a importação do módulo <strong>platformResourceLoader</strong>, com ele é possível usar os métodos <strong>loadScript</strong> e <strong>loadStyle</strong> para carregar nossos recursos. </p>
