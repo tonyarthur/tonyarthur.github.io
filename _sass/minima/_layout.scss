@@ -59,8 +59,18 @@ aside p {
     font-size: 15px;
 }
 article img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+figure {
+    margin: 0;
+}
+figure pre {
+    max-width: 77vw;
+    overflow: auto;
+    margin: 0;
+   
 }
 .social-link {
     text-decoration: none;
