@@ -97,7 +97,7 @@ Após isso, iremos criar uma instancia da biblioteca em **PDFLib.PDFDocument.cre
 
 A biblioteca precisa que os arquivos estejam em um array na base de 8bits. É o que fazemos na liha **Uint8Array.from(atob(file), (c) => c.charCodeAt(0))**
 
-Em seguida usamos a função load do PDFlib caso queira saber mais sobre a biblioteca você pode acessar a [documentação](https://pdf-lib.js.org/) oficial e ir até [****Embed PDF Pages****](https://pdf-lib.js.org/#embed-pdf-pages)
+Em seguida usamos a função load do PDFlib caso queira saber mais sobre a biblioteca você pode acessar a [documentação](https://pdf-lib.js.org/){:target="_blank"} oficial e ir até [****Embed PDF Pages****](https://pdf-lib.js.org/#embed-pdf-pages){:target="_blank"}
 
 Fazemos uma copia da página usando a função **copyPages** e em seguida adicionamos essa página usando a função **addPage**. 
 
@@ -160,8 +160,8 @@ readUploadedFileAndReturnBase64(pdfBlob){
 }
 {% endhighlight %}
 
-Nele, básicamente fazemos uso do objeto [FileReader](https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader) disponível em browsers que permite trabalhar com conteúdos de arquivos. 
-Utilizamos a propriedade [onload](https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/load_event), para manipular o aquivo, quando esse arquivo está pronto, nós pegamos o seu conteúdo e estraímos apenas a base64 dele, retornando este na função. 
+Nele, básicamente fazemos uso do objeto [FileReader](https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader){:target="_blank"} disponível em browsers que permite trabalhar com conteúdos de arquivos. 
+Utilizamos a propriedade [onload](https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/load_event){:target="_blank"}, para manipular o aquivo, quando esse arquivo está pronto, nós pegamos o seu conteúdo e estraímos apenas a base64 dele, retornando este na função. 
 {% highlight javascript %}
 fileUpload(file, fileContents){
       let startPosition = 0
@@ -286,7 +286,7 @@ E então verificamos se ainda tem mais pedaços a serem inseridos, e então cham
 O método **fileUploadInChunks** é o que sempre será chamado pelo front-end, nele verificamos se o **Id** do contentVersion (fileId) já existe. 
 Se não existir chamamos o método saveFile e fazemos a inserção do contentVersion no banco e retornamos o Id criado. 
 Como o front-end passa em pedaços(chunk) o arquivo, na próxima chamada o Id existirá, e então chamamos o método **appendToFile**, ele é responsável por recuperar no banco o pedaço (chunk) que inserimos e então somar mais o outro pedaço que estamos recebendo do front-end e  atualizamos este registro no banco novamente.
-> Lembra que disse que comentária sobre o tamanho do arquivo ? pois bem, na linha                        String existingBody = EncodingUtil.base64Encode(contentVersionResult.VersionData);         Recuperamos o pedaço já salvo do arquivo que está salvo no tipo Blob no campo VersionData do objeto ContentVersion e codificamos ele usando base64Encode, este retorna uma string e salvamos na variável **existingBody** a String possui um tamanho máximo de 6000000, caso isso seja atingido o Salesforce lançará o erro: **[*String length exceeds maximum: 6000000](https://salesforce.stackexchange.com/questions/29141/string-length-exceeds-maximum-6000000)*** por está razão é necessário limitar o tamanho do arquivo lá no front-end, pois um arquivo decodificado gera uma string muito grande.
+> Lembra que disse que comentária sobre o tamanho do arquivo ? pois bem, na linha                        String existingBody = EncodingUtil.base64Encode(contentVersionResult.VersionData);         Recuperamos o pedaço já salvo do arquivo que está salvo no tipo Blob no campo VersionData do objeto ContentVersion e codificamos ele usando base64Encode, este retorna uma string e salvamos na variável **existingBody** a String possui um tamanho máximo de 6000000, caso isso seja atingido o Salesforce lançará o erro: **[String length exceeds maximum: 6000000]** por está razão é necessário limitar o tamanho do arquivo lá no front-end, pois um arquivo decodificado gera uma string muito grande.
 
 O processo se repete até finalizar . 
 
@@ -553,7 +553,7 @@ export default class MergePDFExample extends LightningElement {
 
 Eu sei que esse post ficou um pouco extenso, mas era necessário explicar algumas coisas minimas que está ocorrendo no código. 
 Mas e ai me conta? tu já implementou algo parecido com isto ? ou está passando por isso agora e espero que este conteúdo realmente te ajude. 
-Eu passei por alguns dias tentando fazer isso dá muito certo, e claro pesquisei muito pela internet e esse conteúdo tem referências do post do **[Kapil Batra](https://www.linkedin.com/pulse/create-custom-pdf-lightning-web-component-salesforce-kapil-batra/).**
+Eu passei por alguns dias tentando fazer isso dá muito certo, e claro pesquisei muito pela internet e esse conteúdo tem referências do post do **[Kapil Batra](https://www.linkedin.com/pulse/create-custom-pdf-lightning-web-component-salesforce-kapil-batra/){:target="_blank"}.**
 
 Essa é uma solução que tem um limite da criação do arquivo, porém, há outra solução para aumentar esse limite trabalhando com a API de inserção do ContentVersion. Me conta aqui se tu queres que eu escreva sobre isso também em um outro post. 
 
