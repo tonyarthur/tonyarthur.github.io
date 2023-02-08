@@ -18,8 +18,12 @@ email: tony_arthur@live.com
 description: >- # this means to ignore newlines until "baseurl:"
  "Criado para compartilhar conhecimentos sobre Salesforce, tecnologias e sobre minha pessoa"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "http://tonyarthur.com.br/" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/img/arthur_profile.jpg"
+locale: "pt_BR"
+twitter:
+  username: tonyarthur_
+  card: summary
 
 #Google Analytics
 google_analytics: UA-158161372-1
