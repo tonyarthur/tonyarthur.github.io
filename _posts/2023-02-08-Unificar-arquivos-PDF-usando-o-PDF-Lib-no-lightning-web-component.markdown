@@ -97,7 +97,7 @@ Após isso, iremos criar uma instancia da biblioteca em **PDFLib.PDFDocument.cre
 
 A biblioteca precisa que os arquivos estejam em um array na base de 8bits. É o que fazemos na liha **Uint8Array.from(atob(file), (c) => c.charCodeAt(0))**
 
-Em seguida usamos a função load do PDFlib caso queira saber mais sobre a biblioteca você pode acessar a [documentação](https://pdf-lib.js.org/){:target="_blank"} oficial e ir até [****Embed PDF Pages****](https://pdf-lib.js.org/#embed-pdf-pages){:target="_blank"}
+Em seguida usamos a função load do PDFlib caso queira saber mais sobre a biblioteca você pode acessar a [documentação](https://pdf-lib.js.org/){:target="_blank"} oficial e ir até [Embed PDF Pages](https://pdf-lib.js.org/#embed-pdf-pages){:target="_blank"}
 
 Fazemos uma copia da página usando a função **copyPages** e em seguida adicionamos essa página usando a função **addPage**. 
 
